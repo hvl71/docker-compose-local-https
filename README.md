@@ -34,7 +34,7 @@ cd caddy
 docker-compose up
 ```
 
-Then either navigate to https://foo.test or `curl https://foo.test`.
+Then either navigate to https://hla01.int or `curl https://hla01.int`.
 
 > Note: the nginx/Caddy examples needs to be stopped before starting this Caddy example
 

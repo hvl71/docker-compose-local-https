@@ -6,7 +6,14 @@ services:
       - ./certs:/root/certs # to sync mkcert certificates to Caddy
       - ./Caddyfile:/etc/Caddyfile  # to mount custom Caddyfile
     ports:
-      - "443:2015"
+    #does not work on my windows 10. Throws 403 auth
+    #switching to for instance 777 works. Is 443 used by something else?
+    #netstat -ano
+    #  - "443:2015"
+      - "777:2015"
+    # switching to a port above 1024 works:
+    # https://hla01.int:2016 has a valid cert and is accessible (requires host file entry)
+    # - "2016:2015"
     depends_on:
      - web
 
